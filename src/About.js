@@ -10,12 +10,13 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 
 function About(){
     return <>
-          <div style={{ backgroundColor: "#f5f5f5", minHeight: "70px" }}>
+       <Container maxWidth="sm">
+          <div style={{  marginTop: 3 ,maxwidth:"sm", minHeight:"100px", backgroundColor: "#f5f5f5", minHeight: "70px" }}>
           <AppBar position="static" sx={{ backgroundColor: "purple", padding: "10px" }}>
             <Toolbar>
               <Avatar sx={{ marginRight: 2 }} src="./man.jpg" alt="John Weak" />
               <Typography sx={{ flexGrow: 1 }}>
-              <h1> Hello, Welcome <CelebrationIcon/>  John Weak</h1> 
+              <h3> Hello, Welcome <CelebrationIcon/> <br/> John Weak</h3> 
               </Typography>
               <Badge color="secondary" variant="dot">
              <NotificationsIcon />
@@ -23,7 +24,10 @@ function About(){
             </Toolbar>
           </AppBar>
          
-          <Container maxWidth="sm">
+          <Typography >
+                <h2>About Us</h2>  
+                </Typography>
+                
             <Card sx={{ marginTop: 3 }}>
               <CardMedia
                 component="img"
@@ -32,9 +36,7 @@ function About(){
                 alt="Profile Image"
               />
               <CardContent>
-                <Typography >
-                <h2>About Us</h2>  
-                </Typography>
+               
                 <Typography variant="body1">
                   We are a team of dedicated professionals driven by creativity, innovation, and a passion for exceptional design.
                   whith years of experties in mobile apllication and website design.we specialize in 
@@ -46,16 +48,17 @@ function About(){
                 </Typography>
               </CardContent>
             </Card>
+            
+          
+        </div>
           </Container>
-    
-       
           <BottomNavigation showLabels sx={{ position: "fixed", bottom: 0, width: "100%" }}>
             <BottomNavigationAction label="Home" icon={<HomeIcon />} />
             <BottomNavigationAction label="Compliance" icon={<GavelIcon />} />
             <BottomNavigationAction label="Eligibility" icon={<AssignmentIcon />} />
             <BottomNavigationAction label="Resource" icon={<InfoIcon />} />
           </BottomNavigation>
-        </div>
+       
       </>
 }
 export default About;
